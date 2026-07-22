@@ -2,35 +2,7 @@
 @import url(font.css);
 
 
-@font-face {
-    font-family: 'KccEunyeong';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
-}
-@font-face{
-    font-family: 비트로 코어 TTF;
-    src: url('font/VITRO CORE TTF.woff') format('woff');  
-}
-@font-face {
-    font-family: 'InkLiquid';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Yangjin';
-    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Paperozi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;     /* 가입하기, 구매하기 버튼 */
-}
 html{scroll-behavior: smooth;}
 
 body{background-color: rgb(255, 255, 255);}
@@ -40,141 +12,128 @@ body{background-color: rgb(255, 255, 255);}
   position: fixed;
   right: 20px;
   bottom: 20px;
-  font-size: 38px;
-  border: 1px solid #000;
-  border-radius: 20px;
-  background-color: #fff;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  font-size: 28px;
+  border-radius: 100%;
+  color: #d4c3c3;
+  background-color: #666;
   z-index: 200;
 }
 
 /* Header______________________ */
 
 Header{
-  height: 1200px;
-  background: url(../image/07.jpg) no-repeat center/cover fixed; 
-  margin: auto;
-  transition: 0.5s;
-}
-Header:hover{background-image: url(../image/06.jpg);}
-
-.utilMenu{
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 100px;
   position: fixed;
-  background-color: #fff;
-  box-shadow: 5px 5px 5px rgba(110, 110, 110, 0.4);
+  width: 100%;
+  height: 65px;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
   z-index: 300;
 }
 
-
-.utilMenu2{
+.utilMenu{
   display: flex;
-  position: fixed;
   width: 100%;
-  height: 100px;
-  margin-top: 15px;
-  
+  height: inherit;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
 }
 
 .logo img{
-  width: 150px;
+  width: 90px;
   justify-content: center;
   text-align: center;
   margin-left: 70px;
 }
 
-.gnb3{
-  width: 1000px;
-  margin: auto;
+.gnb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.gnb3 a{
+.gnb a{
   position: relative;
-  display: inline-block;
-  font-size: 20px;
-  margin: 15px;
-  width: 150px;
-  height: 60px;
-  color: #b97676;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pretendard';
+  font-size: 15px;
   text-align: center;
-  font-weight: 400;
-  overflow: hidden;
-  text-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+  width: 150px;
+  color: #222;
 }
-.gnb3 a:before,
-.gnb3 a:after{
+.gnb a:before,
+.gnb a:after{
   content: attr(data-link);
   position: absolute;
   width: 100%;
   transition: 0.35s;
 }
-.gnb3 a:before{
-  top: 0;
-  left: 0;
-}
-.gnb3 a:after{
-  top: 100%;
-  left: 0;
-  color: rgb(25, 49, 37);
-}
-.gnb3 a:hover:before{top: -100%;}
-.gnb3 a:hover:after{top: 0;}
 
-.utilMenu2 ul{
+.utilIcon{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   width: 100px;
-  height: 50px;
   margin-right: 50px;
 }
-.utilMenu2 ul li{
-  font-size: 25px;
+.utilIcon li{
+  font-size: 24px;
   padding: 0 8px;
-  transition: 0.5s;
-}
-
-.txt{
-  display: inline-block;
-  flex-direction: column;
-  margin: 320px;
-}
-.txt h2{
-  font-family: 'Yangjin';
-  width: max-content;
-  font-size: 70px;
-  font-weight: bold;
-  color: #fcfcfc;
-  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.8);
-}
-.txt em{
-  font-family: 'Yangjin';
-  font-size: 70px;
-  font-style: normal;
-  font-weight: bold;
-  color: #fcfcfc;
-  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.8);
-  margin-left: 230px;
 }
 
 /* Header Hover Effect */
-.utilMenu ul li:hover{color: crimson;}
-.utilMenu2 ul li:hover{color: rgb(32, 46, 175);}
+.utilIcon li:hover{
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 30%;
+  color: #fff;
+}
 
+.visual{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%),
+              url(../image/06.jpg) no-repeat center / cover;
+  overflow: hidden;
+}
+.mainText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 18%;
+}
+.Title{
+  font-family: 'Pretendard';
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.Sub{
+  font-size: 24px;
+  color: #f3f3f3;
+}
 
 /* Section__________________ */
+#s1,#s2,#s3,#s4,#s5{
+  width: 100vw;
+  height: 100vh;
+}
 
+h2{
+  text-align: center;
+  font-family: 'Pretendard';
+  font-size: 48px;
+  color: #222;
+}
 
 /* s1___________________________ */
-
-#s1 h2{
-  text-align: center;
-  margin-top: 80px;
-  font-size: 40px;
-  color: rgb(58, 58, 58);
+#s1{
+  
 }
 .content1{
   display: flex;
@@ -182,7 +141,8 @@ Header:hover{background-image: url(../image/06.jpg);}
   align-items: center;
   width: 1300px;
   height: 800px;
-  margin: 100px auto;
+  margin: auto;
+  border: 1px solid #000;
 }
 .item1{
   margin-top: 100px;
@@ -239,44 +199,7 @@ Header:hover{background-image: url(../image/06.jpg);}
   margin-left: 10px;
   padding: 0;
 }
-.frame{
-  display: inline-block;
-  height: 70px;
-  font-size: 15px;
-  flex-direction: column;
-}
-.frame strong{
-  display: flex;
-  font-size: 18px;
-  font-weight: normal;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.frame span{
-  display: inline-block;
-  border-radius: 25px;
-  width: 18px;
-  height: 18px;
-  margin: 10px 8px auto;
-  position: relative;
-}
-.frame span:before{
-    content: '';
-    position: absolute;
-    top: -6px; left: -6px; right: -6px; bottom: -6px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-.frame span:nth-of-type(1){background-color: gray;}
-.frame span:nth-of-type(2){background-color: black;}
-.color{
-  display: inline-block;
-  height: 70px;
-  font-size: 15px;
-  flex-direction: column;
-}
+
 .color strong{
   display: flex;
   font-size: 18px;
@@ -386,12 +309,6 @@ Header:hover{background-image: url(../image/06.jpg);}
 
 /* s2____________________________ */
 
-#s2 h2{
-  text-align: center;
-  margin: 150px 0 150px 0;
-  font-size: 40px;
-  color: rgb(58, 58, 58);
-}
 .content2{
   display: flex;
   width: 1300px;
@@ -455,19 +372,69 @@ Header:hover{background-image: url(../image/06.jpg);}
   font-family: 'Paperozi';
 }
 
-
-
-
 /* s3________________________________ */
-
-
-#s3 h2{
-  text-align: center;
-  margin: 150px 0 150px 0;
-  font-size: 40px;
-  text-transform: uppercase;
-  color: rgb(58, 58, 58);
+.gallery{
+  height: 100vh;
+  display: flex;
 }
+.gallery li{
+  position: relative;
+  flex: 1;
+  height: 80%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.gallery li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0);
+}
+.gallery li .content{
+  position: absolute;
+}
+.container{
+  position: relative;
+}
+/* 처음에 보이는 화면 */
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(165, 165, 165, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover Effect */
+.gallery:hover li{flex: 1;}
+.gallery li:hover{flex: 3;}
+.gallery:hover li img{filter: grayscale(100%);}
+.gallery:hover li:hover img{filter: grayscale(0%);}
+.gallery li:hover .content{
+  bottom: 0;
+  transition-delay: 0.5s;
+}
+.gallery li:hover:before{
+  top: 0;
+  transition-delay: 1s;
+}
+.container:hover .overlay{display: none;}
+
+
+
+
+
+
+
+
+
+/* s4________________________________ */
+
 .animated-title1{
   margin: 0 0 20px;
   width: 1300px;

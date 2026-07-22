@@ -5,11 +5,19 @@
 /* font-family: "Montserrat", sans-serif; */
 
 
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;     /* 가입하기, 구매하기 버튼 */
+}
 
-
-
-
-
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
 
 /* Icon Font */
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');  /* font-family: 'Material Symbols Outlined'; */
