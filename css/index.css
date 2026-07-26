@@ -455,10 +455,10 @@ h2{
 
 .animated-title1{
   margin: 0 0 20px;
-  width: 1300px;
+  width: 90%;
   height: 380px;
   margin: 100px auto;
-  overflow: hidden;
+
   position: relative;
 }
 .ani-img{
@@ -466,6 +466,7 @@ h2{
   position: absolute;
   width: 1300px;
   height: 400px;
+
   animation: row1-ani 20s linear infinite alternate;
 }
 .desc{
@@ -473,14 +474,16 @@ h2{
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 400px;
+  height: 380px;
   margin-left: 16px;
 }
 .desc img{
   width: inherit;
   height: inherit;
   position: relative;
+  border-radius: 5%;
   background: linear-gradient(50deg );
+  transition: 0.3s;
 }
 .text{
   display: flex;
@@ -500,6 +503,9 @@ h2{
 .ani-img:hover{
   animation-play-state: paused;
   cursor: pointer;
+}
+.desc img:hover{
+  transform: translateY(-20px);
 }
 
 
