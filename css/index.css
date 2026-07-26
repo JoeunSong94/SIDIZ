@@ -455,35 +455,52 @@ h2{
 
 .animated-title1{
   margin: 0 0 20px;
-  width: 90%;
-  height: 380px;
+  width: 70%;
+  height: fit-content;
   margin: 100px auto;
-
+  overflow: hidden;
   position: relative;
+}
+
+.animated-title1:before,
+.animated-title1:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 80px;
+  height: 400px;
+  background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%);
+}
+.animated-title1::before{
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0) 100%);
+}
+.animated-title1::after{
+  right: 0;
+  background: linear-gradient(to left, #fff 0%, rgba(255,255,255,0) 100%);
 }
 .ani-img{
   display: flex;
-  position: absolute;
-  width: 1300px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   height: 400px;
-
-  animation: row1-ani 20s linear infinite alternate;
+  animation: row1-ani 30s linear infinite alternate;
 }
 .desc{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 380px;
   margin-left: 16px;
+  border-radius: 5%;
+  transition: 0.3s;
 }
 .desc img{
-  width: inherit;
-  height: inherit;
+  width: 300px;
+  height: 380px;
   position: relative;
   border-radius: 5%;
-  background: linear-gradient(50deg );
-  transition: 0.3s;
 }
 .text{
   display: flex;
@@ -497,16 +514,18 @@ h2{
 .text em{
   font-family: 'Paperozi';
   font-style: normal;
-  font-size: 30px;
+  font-size: 26px;
   color: #fff;
 }
 .ani-img:hover{
   animation-play-state: paused;
   cursor: pointer;
 }
-.desc img:hover{
-  transform: translateY(-20px);
+.desc:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px -5px #333;
 }
+
 
 
 /* Footer_____________________________ */
